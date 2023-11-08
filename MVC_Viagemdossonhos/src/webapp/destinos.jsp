@@ -1,0 +1,559 @@
+<!-- IMPORTAÇÃO DA CLASS USUÁRIO -->
+<%@page import="model.Usuario"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="jstl"%>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<cabeça>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ÍCONE IR PARA -->
+    <link rel="ícone de atalho" href="img_site/LOGO_Viagem-dos-Sonhos.png" type="image/x-icon">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integridade="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="css/all.css">
+
+    <title> Destinos - Ir para | Agência de Viagens </title>
+
+    </head>
+
+    <corpo>
+        <!-- CABEÇALHO -->
+
+        <div class="container-fluid mt-3">
+
+            <cabeçalho class="row">
+                <div class="col-sm-6 mb-2 text-justify">
+                    <a href="index.html">
+                        <img src="img_site/LOGO_Viagem-dos-Sonhos.png" alt="Logo" height="200px">
+                    </a>
+                </div>
+
+                <div class="col-sm-6 text-center">
+                    <h5> JÁ PENSASSE EM CONHECER O PAÍS PERNAMBUCO? </h5>
+                    <p class="small"> Aqui na Viagem dos Sonhos temos as dicas dos melhores picos do MELHOR ESTADO DO
+                        NORDESTE! </p>
+                </div>
+
+                </header>
+                <!-- FIM CABEÇALHO -->
+
+                <!-- INÍCIO MENUS -->
+                <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Alternar navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse parente" id="collapsibleNavId">
+                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                            <li class="nav-item active text-center">
+                                <a class="nav-link btn-hover" href="index.html"> HOME <span
+                                        class="visually-hidden">(atual)</span></a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link btn-hover" href="promocoes.html">PROMOÇÕES</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link btn-hover bg-active" href="#">DESTINOS</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link btn-hover" href="contato.html">CONTATO</a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a class="nav-link login absolute-right" href="login1.html">LOGIN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+        </div>
+        <!-- MENUS FIM -->
+
+        <!-- INÍCIO DESTINOS -->
+        <div class="container mb-2">
+            <div class="linha mt-4">
+                <div class="col-12 text-center">
+                    <h4 class="text-padrao mb-4">OS MELHORES PICOS DO PAÍS PERNAMBUCO</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARTÕES DESTINOS NACIONAIS -->
+        <div class="container ">
+            <div class="row mt-4 mb-3">
+                <div class="col-md-6">
+                    <img class="card-img-top" src="img_site/pe01_marcozero.jpg" alt="Marco Zero">
+                </div>
+
+                <div class="col-md-6 text-alinhado">
+                    <h6 class="text-alinhado mb-2 mt-2"> Sobre o destino: Marco Zero </h6>
+                    <p class="texto-center">
+                        A Praça Rio Branco, também conhecida como Marco Zero, é um espaço público localizado
+                        no bairro do Recife da cidade homônima, capital de Pernambuco. O local fica próximo
+                        ao Porto do Recife e abriga o Marco Zero da cidade do Recife. É deste marco que são
+                        feitas todas as medidas oficiais de distâncias rodoviárias locais.
+                    </p>
+
+                    <!-- Modo de acionamento do botão -->
+                    <button type="button" class="btn bg-buscar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        comprar passagem
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="cabeçalho modal">
+                                    <h5 class="modal-title" id="exampleModalLabel">Comprar passagem</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Para processar a compra, realize o login.
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a href="login1.html">
+                                        <button type="button" class="btn btn-primary">Login</button>
+                                    </a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modo de acionamento do botão FIM -->
+                </div>
+            </div>
+            <div class="row mt-4 mb-3">
+                <div class="col-md-6">
+                    <img class="card-img-top" src="img_site/pe02_praiadebv.jpg" alt="Boa Viagem">
+                </div>
+
+                <div class="col-md-6 text-alinhado">
+                    <h6 class="text-alinhado mb-2 mt-2"> Sobre o Destino: Praia de Boa Viagem </h6>
+                    <p class="text-alinhado">
+                        A Praia de Boa Viagem é a praia urbana mais famosa da cidade do Recife, capital do
+                        estado brasileiro de Pernambuco. Com aproximadamente oito quilômetros de extensão,
+                        está situada no bairro homônimo, Zona Sul da capital pernambucana, delimitada pela
+                        Praia do Pina ao norte e pela Praia de Piedade ao sul.
+                    </p>
+
+                    <!-- Modo de acionamento do botão -->
+                    <button type="button" class="btn bg-buscar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        comprar passagem
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="cabeçalho modal">
+                                    <h5 class="modal-title" id="exampleModalLabel">Comprar passagem</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Para processar a compra, realize o login.
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a href="login1.html">
+                                        <button type="button" class="btn btn-primary">Login</button>
+                                    </a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modo de acionamento do botão FIM -->
+                </div>
+            </div>
+            <div class="row mt-4 mb-3">
+                <div class="col-md-6">
+                    <img class="card-img-top" src="img_site/pe03_noronha.jpg" alt="Noronha">
+                </div>
+
+                <div class="col-md-6 text-alinhado">
+                    <h6 class="text-alinhado mb-2 mt-2"> Sobre o Destino: Fernando de Noronha </h6>
+                    <p class="texto-alinhado">
+                        Fernando de Noronha é um arquipélago vulcânico situado a cerca de 350
+                        quilómetros ao largo da costa nordeste do Brasil. Tem o nome da sua
+                        maior ilha, um parque marinho e santuário ecológico protegido com uma
+                        linha costeira recortada e vários ecossistemas. É reconhecida pelas
+                        suas praias pouco urbanizadas e por atividades como mergulho e snorkeling.
+                        As tartarugas marinhas, as raias, os golfinhos e os tubarões dos recifes
+                        nadam nas águas quentes e cristalinas.
+                    </p>
+
+                    <!-- Modo de acionamento do botão -->
+                    <button type="button" class="btn bg-buscar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        comprar passagem
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="cabeçalho modal">
+                                    <h5 class="modal-title" id="exampleModalLabel">Comprar passagem</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Para processar a compra, realize o login.
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a href="login1.html">
+                                        <button type="button" class="btn btn-primary">Login</button>
+                                    </a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modo de acionamento do botão FIM -->
+
+                </div>
+            </div>
+            <div class="row mt-4 mb-3">
+                <div class="col-md-6">
+                    <img class="card-img-top" src="img_site/pe04_mirantebuique.jpg" alt="Mirante Buíque">
+                </div>
+                <div class="col-md-6 text-alinhado">
+                    <h6 class="text-alinhado mb-2 mt-2"> Sobre o Destino: Buíque </h6>
+                    <p class="texto-alinhado">
+                        Pacata, hospitaleira e grandiosa quando se fala em turismo. A 284 km do Recife,
+                        Buíque abriga um dos mais importantes atrativos turísticos do Estado. Se tu pensou
+                        no Parque Nacional do Vale do Catimbau, ou só Vale do Catimbau, acertou! Esculpido
+                        pela natureza há mais de 150 milhões de anos, o parque foi criado em 2002 para preservar
+                        ecossistemas e possibilitar a pesquisa científica, a educação ambiental e o turismo
+                        ecológico na região. Muito massa, né não?! A beleza dos 62.300 hectares do Vale chega faz
+                        a gente se emocionar de tão lindo que é!
+                    </p>
+
+                    <!-- Modo de acionamento do botão -->
+                    <button type="button" class="btn bg-buscar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        comprar passagem
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="cabeçalho modal">
+                                    <h5 class="modal-title" id="exampleModalLabel">Comprar passagem</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Para processar a compra, realize o login.
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a href="login1.html">
+                                        <button type="button" class="btn btn-primary">Login</button>
+                                    </a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modo de acionamento do botão FIM -->
+
+                </div>
+            </div>
+
+            <div class="row mt-4 mb-3">
+                <div class="col-md-6">
+                    <img class="card-img-top" src="img_site/pe05_olinda.jpg" alt="Sítio Histórico de Olinda">
+                </div>
+
+                <div class="col-md-6 text-alinhado">
+                    <h6 class="text-alinhado mb-2 mt-2"> Sobre o Destino: Olinda </h6>
+                    <p class="texto-alinhado">
+                        Olinda é uma cidade colonial na costa nordeste do Brasil, perto da cidade do Recife.
+                        Fundada em 1535 pelos portugueses, foi construída em encostas íngremes e distingue-se
+                        pela arquitetura do século XVIII, com igrejas barrocas, conventos, mosteiros e casas
+                        de cores vivas. Originalmente um centro da indústria da cana-de-açúcar, é agora conhecida
+                        como uma colónia de artistas, com diversas galerias, oficinas e museus.
+                    </p>
+
+                    <!-- Modo de acionamento do botão -->
+                    <button type="button" class="btn bg-buscar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        comprar passagem
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="cabeçalho modal">
+                                    <h5 class="modal-title" id="exampleModalLabel">Comprar passagem</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Para processar a compra, realize o login.
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a href="login1.html">
+                                        <button type="button" class="btn btn-primary">Login</button>
+                                    </a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modo de acionamento do botão FIM -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mt-4 mb-3">
+                <div class="col-md-6">
+                    <img class="card-img-top" src="img_site/pe06_parreiralpetrolina.jpg" alt="Petrolina">
+                </div>
+
+                <div class="col-md-6 text-alinhado">
+                    <h6 class="text-alinhado mb-2 mt-2"> Sobre o Destino: Petrolina </h6>
+                    <p class="texto-alinhado">
+                        Petrolina é um município brasileiro do interior do estado de Pernambuco, distante 712 km
+                        a oeste de Recife, capital estadual. Possui uma extensão territorial de 4 561,872 km²,
+                        estando 244,8 km² em perímetro urbano e os 4 317,072 km² restantes integrando a zona rural.
+                    </p>
+
+
+                    <!-- Modo de acionamento do botão -->
+                    <button type="button" class="btn bg-buscar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        comprar passagem
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="cabeçalho modal">
+                                    <h5 class="modal-title" id="exampleModalLabel">Comprar passagem</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Para processar a compra, realize o login.
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a href="login1.html">
+                                        <button type="button" class="btn btn-primary">Login</button>
+                                    </a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modo de acionamento do botão FIM -->
+
+                </div>
+            </div>
+            <div class="row mt-4 mb-3">
+                <div class="col-md-6">
+                    <img class="card-img-top" src="img_site/pe07_itamaraca.jpg" alt="Itamaracá">
+                </div>
+
+                <div class="col-md-6 text-alinhado">
+                    <h6 class="text-alinhado mb-2 mt-2"> Sobre o Destino: Itamaracá </h6>
+                    <p class="texto-alinhado">
+                        Ilha de Itamaracá é um município brasileiro do estado de Pernambuco, na Região Metropolitana do
+                        Recife.
+                        A área do município corresponde à totalidade da ilha homônima, situada no litoral norte
+                        pernambucano e
+                        separada do continente pelo canal de Santa Cruz que, para alguns estudiosos, deu origem ao nome
+                        "Pernambuco".
+                    </p>
+
+                    <!-- Modo de acionamento do botão -->
+                    <button type="button" class="btn bg-buscar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        comprar passagem
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="cabeçalho modal">
+                                    <h5 class="modal-title" id="exampleModalLabel">Comprar passagem</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Para processar a compra, realize o login.
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a href="login1.html">
+                                        <button type="button" class="btn btn-primary">Login</button>
+                                    </a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modo de acionamento do botão FIM -->
+
+                </div>
+            </div>
+            <div class="row mt-4 mb-3">
+                <div class="col-md-6">
+                    <img class="card-img-top" src="img_site/pe08_portodegalinhas.jpg" alt="Porto de Galinhas">
+                </div>
+
+                <div class="col-md-6 text-alinhado">
+                    <h6 class="text-alinhado mb-2 mt-2"> Sobre o Destino: Porto de Galinhas</h6>
+                    <p class="texto-alinhado">
+                        Porto de Galinhas é uma praia localizada no distrito homônimo, pertencente ao município
+                        de Ipojuca, no estado de Pernambuco, Brasil. A região possui piscinas de águas claras e
+                        mornas formadas entre corais, além de estuários, mangues, areia branca e coqueirais.
+                    </p>
+
+                    <!-- Modo de acionamento do botão -->
+                    <button type="button" class="btn bg-buscar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        comprar passagem
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="cabeçalho modal">
+                                    <h5 class="modal-title" id="exampleModalLabel">Comprar passagem</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Para processar a compra, realize o login.
+                                </div>
+                                <div class="modal-footer">
+
+                                    <a href="login1.html">
+                                        <button type="button" class="btn btn-primary">Login</button>
+                                    </a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modo de acionamento do botão FIM -->
+
+                </div>
+            </div>
+        </div>
+        <!-- FIM DESTINOS -->
+
+        <!-- ÍCONE DE ROLAGEM -->
+        <i onclick="subirTela()" class="ri-arrow-up-s-line" id="icon-top"></i>
+        <!-- ÍCONE DE ROLAGEM -->
+
+        <!-- RODAPÉ -->
+        <footer class="container-fluid bg-light">
+            <div class="row mb-6">
+                <div class="col-sm-6 mb-2 text-right">
+                    <a href="#">
+                        <img src="img_site/LOGO_Viagem-dos-Sonhos.png" alt="logo" width="160px">
+                    </a>
+                </div>
+
+                <div class="col-sm-6 text-justify">
+                    <h5> Viagem dos Sonhos </h5>
+                    <p class="m-0 small">CNPJ 12.345.678/0009-10</p>
+                    <p class="m-0 small">Rua do Melhor Estado em Linha Reta do País, 0007</p>
+                    <p class="m-0 small">CEP: 01007-069, A PIRRAIA GERA/KK</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button bg-light text-primary" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    QUERES PAGAR COMO?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body text-center">
+                                    <img class="img-fluid"
+                                        src="https://i0.wp.com/urucuna.com/wp-content/uploads/2021/02/bandeiras-cartoes-credito.png?ssl=1"
+                                        alt="formas de pagamento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4 mb-2">
+                <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/quemsomos.html"> Quem somos </a>
+                </div>
+                <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/centralajuda.html"> Central de
+                        ajuda
+                    </a>
+                </div>
+                <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/termoscondicoes.html"> Termos e
+                        condições
+                    </a> </div>
+                <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/duvidas.html"> Dúvidas </a>
+                </div>
+                <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/contato.html"> Clique para falar
+                        conosco
+                    </a> </div>
+                <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/trabalheconosco.html"> Trabalhe
+                        conosco
+                    </a> </div>
+            </div>
+
+            <div class="row mt-4 mb-3">
+                <div class="col-12 text-center"> &copy 2023 - Viagem dos Sonhos </div>
+            </div>
+
+        </footer>
+
+        </body>
+
+</html>
