@@ -1,6 +1,6 @@
 #siteviagemdossonhos
 
-Projeto: Agência de Viagens
+Projeto: Agência de Viagens -
 O projeto corresponde às atividades individuais referente a conclusão de cada módulo - MÓDULO 02 ao MÓDULO 06 -, do curso de DESENVOLVEDOR FULL STACK da RECODE PRO.
 
 == ENTREGAS ==
@@ -39,6 +39,14 @@ Back-end:
 Refatorar o código anterior usando os padrões de projeto MVC e Persistência de dados com os frameworks Spring para a organização da aplicação.
 Banco de dados:
 Criação / Atualização da base de dados usando o padrão NoSql (MongoDB) ou SQL relacional, atendendo as especificações do projeto, usando o framework Spring Data e as Tecnologias da plataforma e linguagem Java, aplicando ORM (Object-Relational Mapping ou em português mapeamento objeto-relacional).
+
+MÓDULO 06
+Front-end:
+Criar uma interface mobile usando React Native para consultas usando API em C#.
+Back-end:
+Desenvolver as APIs para manipulação de dados em C#.
+Banco de dados:
+Ajustar a base de dados para relatórios das APIs, caso seja necessário. Disponibilizar acesso aos dados consumidos pelas APIs.
 
 
 
