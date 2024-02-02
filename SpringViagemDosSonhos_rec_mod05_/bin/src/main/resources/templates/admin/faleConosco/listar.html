@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- ICONE VIAGEM DOS SONHOS -->
+    <link rel="shortcut icon" href="img_site/LOGO_Viagem-dos-Sonhos.png" type="image/x-icon">
+
+	 <!-- BOOTSTRAP -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- REMIX ICON -->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<!-- CSS EXTERNO -->
+	 <link rel="stylesheet" href="css/all.css">
+
+	<title> LISTAR DE SOLICITAÇÕES DE CONTATO | Agência de Viagens </title>
+
+</head>
+
+<body>
+
+	<!-- CABEÇALHO -->
+    <div class="container-fluid mt-3">
+        <header class="row">
+            <div class="col-sm-6 mb-2 text-justify">
+                <a href="#">
+                    <img src="img_site/LOGO_Viagem-dos-Sonhos.png" alt="Logo" height="200px">
+                </a>
+            </div>
+            <div class="col-sm-6 text-center">
+                <h5> JÁ PENSASSE EM CONHECER O PAÍS PERNAMBUCO? </h5>
+                <p class="small"> Aqui na Viagem dos Sonhos temos as dicas dos melhores picos do MELHOR ESTADO DO
+                    NORDESTE! </p>
+            </div>
+            
+        </header>
+        
+        <!-- FIM CABEÇALHO -->
+
+
+		<!-- INÍCIO MENUS -->
+
+		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+			<a class="navbar-brand" href="#"></a>
+			<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse relative" id="collapsibleNavId">
+				<ul class="navbar-nav me-auto mt-2 mt-lg-0">
+					<li class="nav-item active text-center">
+						<a class="nav-link btn-hover" href="/admin"> HOME <span
+								class="visually-hidden">(current)</span></a>
+					</li>
+					<li class="nav-item text-center">
+						<a class="nav-link btn-hover bg-active" href="#">SOLICITAÇÃO DE CONTATO</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+	</div>
+	<!-- FIM MENUS -->
+
+
+
+	<!-- INÍCIO - LISTAR DESTINOS -->
+
+	<main class="container mt-5 mb-5">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Listagem de solicitação de contato</h1>
+			</div>
+		</div>
+
+		<div class="row" id="table">
+			<div class="col-sm-12">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Id</th>
+							<th scope="col">Nome</th>
+							<th scope="col">E-mail</th>
+							<th scope="col">Mensagem</th>
+							<th scope="col">Data Solitação</th>
+							<th scope="col">Data Resposta</th>
+							<th scope="col">Status</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="faleConosco : ${faleConosco}">
+							<th scope="row" th:text="${faleConosco.id}"></th>
+							<td th:text="${faleConosco.nome}"></td>
+							<td th:text="${faleConosco.email}"></td>
+							<td th:text="${faleConosco.mensagem}"></td>
+							<td th:text="${faleConosco.dataContato}"></td>
+							<td th:text="${faleConosco.dataResposta}"></td>
+							<td th:text="${faleConosco.status}"></td>
+
+							<td>
+								<a th:href="@{/{id}/editarStatusSolicitacaoContato (id=${faleConosco.id})}"
+									class="btn btn-warning">
+									Editar
+								</a>
+								<a th:href="@{/{id}/excluirSolicitacaoContato (id=${faleConosco.id})}"
+									class="btn btn-danger"
+									onclick="return confirm('Tem certeza que deseja excluir contato?');">
+									Excluir
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</main>
+
+	<!-- FIM - LISTAR DESTINOS  -->
+
+
+	<!-- ICON SCROLL TOP -->
+
+	<i onclick="subirTela()" class="ri-arrow-up-s-line" id="icon-top"></i>
+
+	<!-- ICON SCROLL TOP -->
+
+
+	<!-- RODAPÉ -->
+	  <footer class="container-fluid bg-light">
+        <div class="row mb-3">
+            <div class="col-sm-6 mb-2 text-right">
+                <a href="#">
+                    <img src="img_site/LOGO_Viagem-dos-Sonhos.png" alt="logo" width="160px">
+                </a>
+            </div>
+
+            <div class="col-sm-6 text-justify">
+                <h5> Viagem dos Sonhos </h5>
+                <p class="m-0 small">CNPJ 12.345.678/0009-10</p>
+                <p class="m-0 small">Rua do Melhor Estado em Linha Reta do País, 0007</p>
+                <p class="m-0 small">CEP: 01007-069, A PIRRAIA GERA/KK</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button bg-light text-primary" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                QUERES PAGAR COMO?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-center">
+                                <img class="img-fluid"
+                                    src="https://i0.wp.com/urucuna.com/wp-content/uploads/2021/02/bandeiras-cartoes-credito.png?ssl=1"
+                                    alt="formas de pagamento">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4 mb-2">
+            <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/quemsomos.html"> Quem somos </a>
+            </div>
+            <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/centralajuda.html"> Central de ajuda
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/termoscondicoes.html"> Termos e
+                    condições
+                </a> </div>
+            <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/duvidas.html"> Dúvidas </a> </div>
+            <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/contato.html"> Clique para falar
+                    conosco
+                </a> </div>
+            <div class="col-lg-2 col-sm-4 small"> <a class="link_rodape" href="html/trabalheconosco.html"> Trabalhe
+                    conosco
+                </a> </div>
+        </div>
+
+        <div class="row mt-4 mb-3">
+            <div class="col-12 text-center"> &copy 2023 - Viagem dos Sonhos </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
